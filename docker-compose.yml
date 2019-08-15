@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  # Apicação do Django (mysite e myapp)
+  aplication:
+    # Builda o Dockerfile padrao no diretorio local (.)
+    build: .
+    # Substitui o comando padrao por um definido
+    command: python3 manage.py runserver 0.0.0.0:8000
+    # Diz que o db local (db.sqlite3) reflitira ao (/code/db.sqlite3) do container
+    volumes:
+      - ./db.sqlite3:/code/db.sqlite3
+    # mapeia a porta 8000 do container para a porta 80 do host
+    ports:
+      - "80:8000"
