@@ -7,6 +7,21 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Olá! Você está no index do myapp.</h1>
+    <h1>Registro de horas trabalhadas</h1>
+    <form action="" method="post">
+        <label for="data">Data: </label>
+        <input type="date" name="data" id="data"><br>
+
+        <label for="hora-chegada">Chegada: </label>
+        <input type="time" name="hora-chegada" id="hora-chegada">
+        <label for="hora-saida">Saída: </label>
+        <input type="time" name="hora-saida" id="hora-saida">
+        <p>Total de horas trabalhada: 00:00</p><br>
+
+        <label for="hora-almoco">Duração do almoço: </label>
+        <input type="time" name="duracao-almoco" id="duracao-almoco" value="00:00"><br>
+
+        <input type="submit" value="Registrar Dia Trabalhado">
+    </form>
 </body>
 </html>
